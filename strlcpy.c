@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 14:02:10 by usantos-          #+#    #+#             */
-/*   Updated: 2021/05/24 14:02:18 by usantos-         ###   ########.fr       */
+/*   Created: 2021/05/28 22:39:01 by usantos-          #+#    #+#             */
+/*   Updated: 2021/05/28 23:41:11 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	size_t	i;
+
+	if (!size)
+		return (ft_strlen(src));
+	i = 0;
+	while (src[i] != '\0' && i < (size - 1))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }

@@ -6,7 +6,7 @@
 #    By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/01 08:16:09 by usantos-          #+#    #+#              #
-#    Updated: 2021/06/05 12:03:50 by usantos-         ###   ########.fr        #
+#    Updated: 2021/06/05 13:51:33 by usantos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 		
@@ -17,9 +17,12 @@ SRCS	=	ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_strchr.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
+			ft_strnstr.c \
 			ft_strlen.c \
+			ft_strrchr.c \
 			ft_strncmp.c \
 			ft_tolower.c \
 			ft_toupper.c

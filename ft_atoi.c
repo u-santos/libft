@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 19:57:52 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/05 12:07:31 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/06 15:21:07 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int 	ft_atoi(const char *str)
 {
-	int	i;
-	int	negative;
-	int	result;
+	long int	i;
+	long int	negative;
+	long int	result;
 
 	i = 0;
 	negative = 1;

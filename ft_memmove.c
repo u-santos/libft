@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 19:24:51 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/06 14:51:48 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/06 15:00:22 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (dest < src)
-		return (ft_memcpy(dest, src, n));
-	while (n-- > 0)
-		((char *)dest)[n] = ((char *)src)[n];
+	if (dest != src)
+	{
+		if (dest < src)
+			return (ft_memcpy(dest, src, n));
+		while (n-- > 0)
+			((char *)dest)[n] = ((char *)src)[n];
+	}
 	return (dest);
 }

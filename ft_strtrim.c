@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 23:58:52 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/06 14:19:38 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/06 15:26:20 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 			s1++;
 		length = ft_strlen(s1);
 		while (length && ft_strchr(set, s1[length]))
-			length++;
+			length--;
 		newstr = ft_substr((char *)s1, 0, (length + 1));
 		return (newstr);
 	}
-	else
-		return (NULL);
+	return (NULL);
 }

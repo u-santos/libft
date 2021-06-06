@@ -6,7 +6,7 @@
 #    By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/01 08:16:09 by usantos-          #+#    #+#              #
-#    Updated: 2021/06/05 20:33:36 by usantos-         ###   ########.fr        #
+#    Updated: 2021/06/05 22:58:12 by usantos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 		
@@ -32,7 +32,11 @@ SRCS	=	ft_atoi.c \
 			ft_memccpy.c \
 			ft_memmove.c \
 			ft_memchr.c \
-			ft_memcmp.c
+			ft_memcmp.c \
+			ft_calloc.c \
+			ft_strdup.c \
+			ft_strmapi.c
+
 OBJS = $(SRCS:.c=.o)
 RM = rm -rf
 LIBA = ar -rc

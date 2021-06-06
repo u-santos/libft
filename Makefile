@@ -6,7 +6,7 @@
 #    By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/01 08:16:09 by usantos-          #+#    #+#              #
-#    Updated: 2021/06/05 22:58:12 by usantos-         ###   ########.fr        #
+#    Updated: 2021/06/06 14:17:15 by usantos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 		
@@ -35,8 +35,11 @@ SRCS	=	ft_atoi.c \
 			ft_memcmp.c \
 			ft_calloc.c \
 			ft_strdup.c \
-			ft_strmapi.c
-
+			ft_strmapi.c \
+			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c
+	
 OBJS = $(SRCS:.c=.o)
 RM = rm -rf
 LIBA = ar -rc

@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 23:02:19 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/06 15:12:14 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 01:18:56 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr = ft_calloc(1, 1);
 		return (substr);
 	}
-	substr = ft_calloc((len + 1), sizeof(char));
+	if (len > ft_strlen(s + start))
+		substr = ft_calloc(ft_strlen((s + start) + 1), sizeof(char));
+	else
+		substr = ft_calloc((len + 1), sizeof(char));
 	if (!substr)
 		return (NULL);
 	while (index < len)

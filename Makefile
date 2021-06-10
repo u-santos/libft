@@ -6,7 +6,7 @@
 #    By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/01 08:16:09 by usantos-          #+#    #+#              #
-#    Updated: 2021/06/07 13:29:32 by usantos-         ###   ########.fr        #
+#    Updated: 2021/06/10 00:06:10 by usantos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 		
@@ -44,7 +44,16 @@ SRCS	=	ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c \
+			ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
 OBJS = $(SRCS:.c=.o)
 RM = rm -rf
 LIBA = ar -rc

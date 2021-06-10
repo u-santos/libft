@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 12:28:00 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/10 01:29:11 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 01:30:45 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strchr(const char *s, int c)
 		return (NULL);
 	if (c == 0)
 	{
-		while(*s)
+		while (*s)
 			s++;
-		return (s);
+		return ((char *) s);
 	}
 	while (*s)
 	{	

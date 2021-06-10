@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 12:28:00 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/10 01:11:05 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 01:27:29 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	if (!s)
 		return (NULL);
-	while (*s != '\0' && c != *s)
+	while (*s)
+	{	
+		if (c == *s)
+			return ((char *) s);
 		s++;
-	if (c == *s)
-		return ((char *) s);
+	}
 	return (0);
 }

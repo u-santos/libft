@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 21:56:04 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/07 00:13:45 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 00:46:53 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,10 @@ void	ft_splinter(char const *s, char c, char **array)
 				index++;
 			array[jndex] = (char *)ft_calloc(sizeof(char), (index - start + 1));
 			if (array == 0)
+			{
 				freet(array, jndex);
+				return ;
+			}
 			array[jndex] = ft_substr(s, start, (index - start));
 			jndex++;
 		}

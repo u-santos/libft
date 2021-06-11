@@ -6,7 +6,7 @@
 #    By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/01 08:16:09 by usantos-          #+#    #+#              #
-#    Updated: 2021/06/11 00:32:18 by usantos-         ###   ########.fr        #
+#    Updated: 2021/06/11 01:11:03 by usantos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 		
@@ -71,15 +71,8 @@ $(NAME):	${OBJS}
 %.o:	%.c
 	$(CC) -c $(CFLAGS) $< -o $@
 
-bonus: $(OBJS_BONUS)
+bonus: $(OBJS_BONUS) $(NAME)
 	$(LIBA) $(NAME) $(OBJS_BONUS)
-
-$(OBJS_BONUS): $(BONUS)
-	$(CC) $(CFLAGS) -c $(SBONUS)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
@@ -89,4 +82,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY: all clean re fclean
+.PHONY: all clean re fclean bonus

@@ -6,7 +6,7 @@
 #    By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/01 08:16:09 by usantos-          #+#    #+#              #
-#    Updated: 2021/06/10 00:06:10 by usantos-         ###   ########.fr        #
+#    Updated: 2021/06/11 00:32:18 by usantos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 		
@@ -44,16 +44,18 @@ SRCS	=	ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-			ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
+			ft_putnbr_fd.c 
+
+SBONUS = ft_lstnew.c \
+		 ft_lstadd_front.c \
+		 ft_lstsize.c \
+		 ft_lstlast.c \
+		 ft_lstadd_back.c \
+		 ft_lstdelone.c \
+		 ft_lstclear.c \
+		 ft_lstiter.c \
+		 ft_lstmap.c
+OBJS_BONUS = $(SBONUS:.c=.o)
 OBJS = $(SRCS:.c=.o)
 RM = rm -rf
 LIBA = ar -rc
@@ -65,19 +67,26 @@ all:	$(NAME)
 $(NAME):	${OBJS}
 	${LIBA} $(NAME) $(OBJS)
 	ranlib $(NAME)
+
 %.o:	%.c
 	$(CC) -c $(CFLAGS) $< -o $@
+
+bonus: $(OBJS_BONUS)
+	$(LIBA) $(NAME) $(OBJS_BONUS)
+
+$(OBJS_BONUS): $(BONUS)
+	$(CC) $(CFLAGS) -c $(SBONUS)
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean
+.PHONY: all clean re fclean

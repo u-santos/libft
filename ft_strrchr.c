@@ -6,7 +6,7 @@
 /*   By: usantos- <usantos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 12:52:17 by usantos-          #+#    #+#             */
-/*   Updated: 2021/06/05 14:06:40 by usantos-         ###   ########.fr       */
+/*   Updated: 2021/06/11 22:48:48 by usantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*begginig;
+	char	*begin;
 
-	begginig = (char *)s;
+	begin = (char *)s;
 	if (s != NULL)
 	{
 		while (*s)
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 		if ((char)c == '\0')
 			return ((char *)s);
 		s--;
-		while (*s != (char)c && *s != *begginig)
+		while (*s != (char)c && s != begin)
 			s--;
 	}
 	if (*s == (char)c)
